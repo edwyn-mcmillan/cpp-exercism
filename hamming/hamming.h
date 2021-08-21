@@ -1,8 +1,13 @@
 #if !defined(HAMMING_H)
 #define HAMMING_H
 
-namespace hamming {
+#include <string>
 
-}  // namespace hamming
+namespace hamming 
+{
+	int hamming::compute(std::string dna1, std::string dna2) {
+		std::string match;
+	}
+}  
 
-#endif // HAMMING_H
+#endif 
