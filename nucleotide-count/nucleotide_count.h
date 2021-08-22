@@ -5,9 +5,16 @@
 #include <string>
 
 namespace nucleotide_count {
-	std::map<std::string, int>  reference;
+	class counter {
+	private:
+	    std::map<std::string, int>  reference;
+		
+	public:
+		counter(std::string input);
+		std::map<char, int> nucleotide_counts() const;
+		int count(char c) const;
 
-	int counter(std::string input);
+	};
 }  
 
 #endif // NUCLEOTIDE_COUNT_H
