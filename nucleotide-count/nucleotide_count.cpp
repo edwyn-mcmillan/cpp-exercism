@@ -3,7 +3,7 @@
 #include <string>
 
 namespace nucleotide_count {
-	std::map <std::string, int> dna{ {"A", 0}, {"C", 0}, {"G", 0}, {"T", 0} };
+	std::map <std::string, int>reference{ {"A", 0}, {"C", 0}, {"G", 0}, {"T", 0} };
 
 	static int counter(std::string input) {
 

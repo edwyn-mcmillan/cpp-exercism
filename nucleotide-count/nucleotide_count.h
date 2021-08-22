@@ -5,7 +5,7 @@
 #include <string>
 
 namespace nucleotide_count {
-	std::map<std::string, int> dna;
+	std::map<std::string, int>  reference;
 
 	int counter(std::string input);
 }  
