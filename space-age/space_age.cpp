@@ -1,6 +1,6 @@
 #include "space_age.h"
-#include <string>
-#include <map>
+
+
 
 namespace space_age {
 
@@ -15,17 +15,43 @@ namespace space_age {
   { "Neptune", 164.79132 },
 	};
 
-	class space_age {
-	public:
-		space_age(int input) {
-			int seconds = input;
-		}
+	// Construct space_age to get seconds input.
+	space_age::space_age(double input) {
+		secondsInput = input;
 	};
 
-	int orbitalPeriodInEarthYears(int period) {
-		return ((space_age.seconds / planet["Earth"]) / period).toFixed(2);
+	// Assign seconds to input.
+	double space_age::seconds() const {
+		return secondsInput;
+	}
+
+	double space_age::orbitalPeriodInEarthYears(double period) const {
+		return ((secondsInput / planet["Earth"]) / period);
 	};
 
 
-
+	double space_age::on_earth() const {
+		return orbitalPeriodInEarthYears(1);
+	}
+	double space_age::on_mercury() const {
+		return orbitalPeriodInEarthYears(planet["Mercury"]);
+	}
+	double space_age::on_venus() const {
+		return orbitalPeriodInEarthYears(planet["Venus"]);
+	}
+	double space_age::on_mars() const {
+		return orbitalPeriodInEarthYears(planet["Mars"]);
+	}
+	double space_age::on_jupiter() const {
+		return orbitalPeriodInEarthYears(planet["Jupiter"]);
+	}
+	double space_age::on_saturn() const {
+		return orbitalPeriodInEarthYears(planet["Saturn"]);
+	}
+	double space_age::on_uranus() const {
+		return orbitalPeriodInEarthYears(planet["Uranus"]);
+	}
+	double space_age::on_neptune() const {
+		return orbitalPeriodInEarthYears(planet["Neptune"]);
+	}
 }
