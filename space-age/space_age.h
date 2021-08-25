@@ -6,13 +6,10 @@
 
 namespace space_age {
 
-
-
 	class space_age {
 	public:
 		space_age(double input);
 		double secondsInput;
-
 		double seconds() const;
 
 		double orbitalPeriodInEarthYears(double period) const;
@@ -26,6 +23,6 @@ namespace space_age {
 		double on_uranus() const;
 		double on_neptune() const;
 	};
-}  // namespace space_age
+}
 
 #endif // SPACE_AGE_H
